@@ -2,7 +2,7 @@
 
 ## Trabalho Programação Web - UFG - 2017/1
 
-Esse repositório é dedicado ao desenvolvimento do nosso projeto EasyChurras.
+Esse repositório é dedicado ao desenvolvimento do nosso projeto EasyBuffet.
 
 ## Tema
 
