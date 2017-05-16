@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>br.ufg.inf</groupId>
-  <artifactId>pw-ufg-2017-1</artifactId>
+  <artifactId>EasyBuffet</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
