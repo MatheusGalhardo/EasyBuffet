@@ -21,7 +21,7 @@ Esse repositório é dedicado ao desenvolvimento do nosso projeto EasyBuffet.
 
 git clone https://github.com/MatheusGalhardo/EasyBuffet
 
-Para rodar com o Tomcat.
+## Para rodar com o Tomcat.
 
 mvnw org.apache.tomcat.maven:tomcat7-maven-plugin:run
 
