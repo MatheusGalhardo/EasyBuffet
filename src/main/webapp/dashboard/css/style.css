@@ -8,15 +8,19 @@
 
 .icon-block {
   padding: 75px;
-  background-color: orange;
+  background-color: #00B0FF;
   border-radius: 10px 20px 30px 40px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
-	color: black;
+	color: white;
 	
 }
 
 .centered {
 	text-align: center;
+}
+
+.teste{
+  background-color: #4DB6AC;
 }

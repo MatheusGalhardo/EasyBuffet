@@ -2876,8 +2876,6 @@ ul.staggered-list li {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0px;
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(51, 51, 51, 0.08);
 }
 
 table, th, td {
