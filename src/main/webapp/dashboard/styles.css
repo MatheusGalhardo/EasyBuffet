@@ -18,6 +18,13 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+legend {
+  font-family: 'Roboto',sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+}
+
 .logo {
   padding-left: 0px;
   padding-bottom: 0px;
