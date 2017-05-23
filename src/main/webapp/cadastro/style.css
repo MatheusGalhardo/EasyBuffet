@@ -14,3 +14,10 @@ body {
 .formcss{
   text-align: center;
 }
+
+.logo {
+  padding-left: 0px;
+  padding-bottom: 0px;
+  height: 50px;
+  width: auto;
+}
