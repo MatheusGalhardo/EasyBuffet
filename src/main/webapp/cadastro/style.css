@@ -1,0 +1,16 @@
+body { 
+  padding-top:30px;
+  background-color: #009688;
+  }
+
+.form-control { 
+  margin-bottom: 10px; 
+  }
+
+.legend{
+  font-size: 40px;
+}
+
+.formcss{
+  text-align: center;
+}
