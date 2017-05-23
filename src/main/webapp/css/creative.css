@@ -71,7 +71,7 @@ aside {
   transition: all 0.35s;
 }
 
-.logo {
+.logo-main {
   padding-left: 20px;
   padding-bottom: 15px;
   height: 50px;
@@ -405,6 +405,10 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-xl {
   padding: 15px 30px;
+}
+
+.btn-md {
+  padding: 10px 20px;
 }
 ::-moz-selection {
   color: white;

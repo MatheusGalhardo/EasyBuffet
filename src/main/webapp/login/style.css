@@ -1,5 +1,20 @@
-body{
-    background-color: #009688;
+
+html { 
+    background: url(../img/login/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-color: transparent;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #C62828;
 }
 
 .form-signin
@@ -73,4 +88,8 @@ body{
     display: block;
     margin-top: 35px;
     font-size: 15px;
+}
+.logo {
+  height: 70px;
+  width: auto;
 }

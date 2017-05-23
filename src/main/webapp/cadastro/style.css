@@ -1,14 +1,22 @@
+html { 
+    background: url(../img/cadastro/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body { 
   padding-top:30px;
-  background-color: #009688;
-  }
+  background-color: transparent;
+}
+
+a,p,h1,button {
+  font-family: 'Roboto', sans-serif;
+}
 
 .form-control { 
   margin-bottom: 10px; 
-  }
-
-.legend{
-  font-size: 40px;
 }
 
 .formcss{
