@@ -70,6 +70,14 @@ aside {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
+
+.logo {
+  padding-left: 20px;
+  padding-bottom: 15px;
+  height: 50px;
+  width: auto;
+}
+
 .navbar-default .navbar-header .navbar-brand {
   color: #c62828;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
