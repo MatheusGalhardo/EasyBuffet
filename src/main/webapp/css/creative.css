@@ -84,6 +84,16 @@ aside {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.navbar-default .navbar-brand {
+    padding: 0px;
+}
+
+.navbar-default .navbar-brand>img {
+    height: 100%;
+    padding: 10px; 
+    width: auto;
+}
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
   color: #A2CE49;
