@@ -11,9 +11,47 @@ public class Evento {
     private String nomeEvento;
     private String dataEvento;
     private String numeroConvidados;
-    private String localEvento;        
-        
+    private String localEvento;    
+    private String descricaoEvento;
+    private String websiteEvento;
+    private String enderecoEvento;
+    private String complementoEndereco;
+    
 	public Evento() {}
+    
+	public String getEnderecoEvento() {
+		return enderecoEvento;
+	}
+
+	public void setEnderecoEvento(String enderecoEvento) {
+		this.enderecoEvento = enderecoEvento;
+	}
+
+	public String getComplementoEndereco() {
+		return complementoEndereco;
+	}
+
+	public void setComplementoEndereco(String complementoEndereco) {
+		this.complementoEndereco = complementoEndereco;
+	}
+    
+	public String getWebsiteEvento() {
+		return websiteEvento;
+	}
+
+	public void setWebsiteEvento(String websiteEvento) {
+		this.websiteEvento = websiteEvento;
+	}
+
+        
+	public String getDescricaoEvento() {
+		return descricaoEvento;
+	}
+
+
+	public void setDescricaoEvento(String descricaoEvento) {
+		this.descricaoEvento = descricaoEvento;
+	}
 
 
 	public float getId() {

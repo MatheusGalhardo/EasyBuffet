@@ -1,6 +1,9 @@
 package mvc;
 
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
+
 import static java.lang.System.out;
 
 import javax.servlet.ServletException;
@@ -18,10 +21,23 @@ public class EventoControler extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		
 		boolean persistido = false;
-		//String parametro1 = request.getParameter("param");
-
-		if(persistido){
-		request.setAttribute("msgGeral", "Salvo com sucesso!");
+		Evento evento = new Evento();		
+		
+		evento.setNomeEvento(request.getParameter("nome"));
+		evento.setDataEvento(request.getParameter("data"));
+		evento.setNumeroConvidados(request.getParameter("convidados"));
+		evento.setWebsiteEvento(request.getParameter("website"));
+		evento.setDescricaoEvento(request.getParameter("descricao"));
+		evento.setLocalEvento(request.getParameter("local"));
+		evento.setEnderecoEvento(request.getParameter("endereco"));
+		evento.setComplementoEndereco(request.getParameter("complemento"));
+		
+		boolean estaPreenchido = Utilitarios.verificaCampos(evento);
+		
+		if(estaPreenchido){
+			if(persistido){
+				request.setAttribute("msgGeral", "Salvo com sucesso!");
+				}
 		}
                
 		request.getRequestDispatcher("new-event.jsp").

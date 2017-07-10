@@ -22,32 +22,32 @@
 
         <div class="Peso">
         <label for="peso" class="sr-only" >Nome do Evento: </label>
-        <input type="text" name="peso" class="form-control" placeholder="" required autofocus/>
+        <input type="text" name="nome" class="form-control" placeholder="" required autofocus/>
         </div>
 
         <div class="Altura">
         <label for="altura" class="sr-only">Data do Evento: </label>
-        <input type="text"  name="altura" class="form-control" placeholder="" required/>
+        <input type="text"  name="data" class="form-control" placeholder="" required/>
         </div>
         
         <div class="Peso">
         <label for="peso" class="sr-only" >N de Convidados: </label>
-        <input type="text" name="peso" class="form-control" placeholder="" required autofocus/>
+        <input type="text" name="convidados" class="form-control" placeholder="" required autofocus/>
         </div>
 
         <div class="Altura">
         <label for="altura" class="sr-only">Website: </label>
-        <input type="text"  name="altura" class="form-control" placeholder="" required/>
+        <input type="text"  name="website" class="form-control" placeholder="" required/>
         </div>
         
         <div class="Peso">
         <label for="peso" class="sr-only" >Descricao do Evento: </label>
-        <input type="text" name="peso" class="form-control" placeholder="" required autofocus/>
+        <input type="text" name="descricao" class="form-control" placeholder="" required autofocus/>
         </div>
 
         <div class="Altura">
         <label for="altura" class="sr-only">Local do Evento: </label>
-        <input type="text"  name="altura" class="form-control" placeholder="" required/>
+        <input type="text"  name="local" class="form-control" placeholder="" required/>
         </div>
         
         <br>
