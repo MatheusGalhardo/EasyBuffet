@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(value = "/easybuffet/newevent")
+@WebServlet(value = "/dashboard/new-event.html")
 public class EventoControler extends HttpServlet {
 	
 	@Override
@@ -17,12 +17,14 @@ public class EventoControler extends HttpServlet {
 			HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
+		boolean persistido = false;
 		//String parametro1 = request.getParameter("param");
 
-		
-		//request.setAttribute("msgGeral", msgGeral);
-                
-		request.getRequestDispatcher("new-event.html").
+		if(persistido){
+		request.setAttribute("msgGeral", "Salvo com sucesso!");
+		}
+               
+		request.getRequestDispatcher("new-event.jsp").
 			forward(request, response);
                 
      }
