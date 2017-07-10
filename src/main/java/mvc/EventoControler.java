@@ -24,7 +24,7 @@ public class EventoControler extends HttpServlet {
 		Evento evento = new Evento();		
 		
 		evento.setNomeEvento(request.getParameter("nome"));
-		evento.setDataEvento(request.getParameter("data"));
+		evento.setDataEvento(Utilitarios.stringToCalendar(request.getParameter("data"), "dd/mm/yyyy"));
 		evento.setNumeroConvidados(request.getParameter("convidados"));
 		evento.setWebsiteEvento(request.getParameter("website"));
 		evento.setDescricaoEvento(request.getParameter("descricao"));
@@ -37,6 +37,8 @@ public class EventoControler extends HttpServlet {
 		if(estaPreenchido){
 			if(persistido){
 				request.setAttribute("msgGeral", "Salvo com sucesso!");
+				}else{
+					request.setAttribute("msgGeral", "Falha ao salvar!");
 				}
 		}
                
