@@ -26,9 +26,9 @@ public class GerenciaEventoControler extends HttpServlet {
         Evento ev = new Evento();
         Evento ev1 = new Evento();
         ev.setNomeEvento("Oi Yago");
-        ev.setDataEvento(Calendar.getInstance());
+        ev.setDataString(Utilitarios.converteDataCalendar(Calendar.getInstance(), true));
         ev1.setNomeEvento("Teste Yago");
-        ev1.setDataEvento(Calendar.getInstance());
+        ev1.setDataString(Utilitarios.converteDataCalendar(Calendar.getInstance(), true));
 
         eventos.add(ev);
         eventos.add(ev1);

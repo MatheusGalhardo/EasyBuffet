@@ -11,6 +11,7 @@ public class Evento {
 	private float id;
     private String nomeEvento;
     private Calendar dataEvento;
+    private String dataString;
     private String numeroConvidados;
     private String localEvento;    
     private String descricaoEvento;
@@ -102,6 +103,14 @@ public class Evento {
 
 	public void setLocalEvento(String localEvento) {
 		this.localEvento = localEvento;
+	}
+
+	public String getDataString() {
+		return dataString;
+	}
+
+	public void setDataString(String dataString) {
+		this.dataString = dataString;
 	}
      
                
