@@ -23,15 +23,12 @@ public class GerenciaEventoControler extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
 
         ArrayList<Evento> eventos = new ArrayList();
-        Evento ev = new Evento();
-        Evento ev1 = new Evento();
-        ev.setNomeEvento("Oi Yago");
-        ev.setDataString(Utilitarios.converteDataCalendar(Calendar.getInstance(), true));
-        ev1.setNomeEvento("Teste Yago");
-        ev1.setDataString(Utilitarios.converteDataCalendar(Calendar.getInstance(), true));
-
-        eventos.add(ev);
-        eventos.add(ev1);
+        
+        eventos = (ArrayList<Evento>) EventoDao.listar();
+        
+        for(Evento p : eventos){
+        	p.setDataString(Utilitarios.converteDataCalendar(p.getDataEvento(), true));
+        }
 
         request.setAttribute("listaEventos", eventos);
 

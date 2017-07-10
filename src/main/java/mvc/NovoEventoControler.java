@@ -40,20 +40,15 @@ public class NovoEventoControler extends HttpServlet {
 		
 		if(estaPreenchido){
 			
-			//MATHEUS E RENAN, CHAMAR O DAO DE VOCES PRA SALVAR AQUI, DA SEGUINTE FORMA:
-			// persistido = EventoDao.salvar....;
-			
-			if(persistido){
-				request.setAttribute("msgGeral", "Salvo com sucesso!");
-				}else{
-					request.setAttribute("msgGeral", "Falha ao salvar!");
-				}
+			EventoDao.inclui(evento);
+			request.setAttribute("msgGeral", "Salvo com sucesso!");	
 			}
-		}
-               
+		
+		}      
 		request.getRequestDispatcher("new-event.jsp").
 			forward(request, response);
                 
-     }
+		
 	
+	}
 }

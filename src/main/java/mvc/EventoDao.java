@@ -33,7 +33,7 @@ public class EventoDao {
 
 	public static List<Evento> listar() {
 		EntityManager em = emf.createEntityManager();
-		String jpql = "from Professor";
+		String jpql = "from Evento";
 		TypedQuery<Evento> query = em.createQuery(jpql, Evento.class);
 		List<Evento> result = query.getResultList();
 		em.close();

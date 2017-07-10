@@ -4,11 +4,16 @@ import static java.lang.System.out;
 
 import java.util.Calendar;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Evento {
 
    
-	
+	@Id
 	private float id;
+	
     private String nomeEvento;
     private Calendar dataEvento;
     private String dataString;
