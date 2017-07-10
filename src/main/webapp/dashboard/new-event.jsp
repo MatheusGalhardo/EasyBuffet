@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="../css\estilo.css">
 <link href="..\vendor\bootstrap\css\bootstrap.min.css" rel="stylesheet">
 
-<title>EasyBuffet - Novo Eventos</title>
+<title>EasyBuffet - Novo Evento</title>
 <link href="..\vendor\font-awesome\css\font-awesome.min.css"
 	rel="stylesheet" type="text/css">
 <link

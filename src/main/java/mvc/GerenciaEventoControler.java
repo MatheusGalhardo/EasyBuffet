@@ -16,17 +16,28 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(value = "/dashboard/events.html")
 public class GerenciaEventoControler extends HttpServlet {
-	
-	@Override
-	protected void doGet(
-			HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		
-		
-               
-		request.getRequestDispatcher("events.jsp").
-			forward(request, response);
-                
+
+    @Override
+    protected void doGet(
+            HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+
+        ArrayList<Evento> eventos = new ArrayList();
+        Evento ev = new Evento();
+        Evento ev1 = new Evento();
+        ev.setNomeEvento("Oi Yago");
+        ev.setDataEvento(Calendar.getInstance());
+        ev1.setNomeEvento("Teste Yago");
+        ev1.setDataEvento(Calendar.getInstance());
+
+        eventos.add(ev);
+        eventos.add(ev1);
+
+        request.setAttribute("listaEventos", eventos);
+
+        request.getRequestDispatcher("events.jsp").
+            forward(request, response);
+
      }
-	
+
 }

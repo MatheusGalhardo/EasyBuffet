@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="pt-br">
 
 <head>
@@ -22,7 +21,7 @@
 	href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"
 	rel="stylesheet">
 
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!-- Custom CSS -->
 <link href="css/sb-admin.css" rel="stylesheet">
 
@@ -65,8 +64,8 @@
 							Meus Eventos <small>Historico de Eventos</small>
 						</h1>
 						<ol class="breadcrumb">
-							<li class="active"><i class="fa fa-cutlery"></i> Aqui vocÃª
-								poderÃ¡ ver seus eventos ativos no momento.</li>
+							<li class="active"><i class="fa fa-cutlery"></i> Aqui você
+								poderá ver seus eventos ativos no momento.</li>
 						</ol>
 					</div>
 				</div>
@@ -82,16 +81,16 @@
 										<th>Numero de Convidados</th>
 									</tr>
 								</thead>
-								<tbody>
-									<c:forEach begin="1" end="${ no }" step="1" value="${eventList}" var="events">
+
+									<c:forEach items="${listaEventos}" var="events">
 										<tr>
-											<td><c:out value="${events.name}" /></td>
-											<td><c:out value="${events.data}" /></td>
-											<td><c:out value="${events.type}" /></td>
-											<td><c:out value="${events.guests}" /></td>
+											<td><c:out value="${events.nomeEvento}" /></td>
+											<td><c:out value="${events.dataEvento}" /></td>
+											<%-- <td><c:out value="${events.type}" /></td>
+											<td><c:out value="${events.guests}" /></td> --%>
 										</tr>
 									</c:forEach>
-								</tbody>
+	
 							</table>
 						</div>
 					</div>
@@ -111,7 +110,7 @@
 		src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/events.js"></script>
+	<!-- <script src="js/events.js"></script> -->
 </body>
 
 </html>
