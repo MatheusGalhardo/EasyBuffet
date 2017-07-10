@@ -30,5 +30,17 @@ public class Utilitarios {
       return saida;
   }
   
+  public static Calendar stringToCalendar(String data, String formato) {
+      try {
+          SimpleDateFormat formatoDate = new SimpleDateFormat(formato);
+          Calendar retorno = Calendar.getInstance();
+          retorno.setTime(formatoDate.parse(data));
+          return retorno;
+      } catch (Exception e) {
+          e.printStackTrace();
+          return null;
+      }
+  }
+  
   
   }

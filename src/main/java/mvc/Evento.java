@@ -2,14 +2,15 @@ package mvc;
 
 import static java.lang.System.out;
 
+import java.util.Calendar;
+
 public class Evento {
 
    
 	
 	private float id;
-    private String cpfOrganizador;
     private String nomeEvento;
-    private String dataEvento;
+    private Calendar dataEvento;
     private String numeroConvidados;
     private String localEvento;    
     private String descricaoEvento;
@@ -64,16 +65,6 @@ public class Evento {
 	}
 
 
-	public String getCpfOrganizador() {
-		return cpfOrganizador;
-	}
-
-
-	public void setCpfOrganizador(String cpfOrganizador) {
-		this.cpfOrganizador = cpfOrganizador;
-	}
-
-
 	public String getNomeEvento() {
 		return nomeEvento;
 	}
@@ -84,12 +75,12 @@ public class Evento {
 	}
 
 
-	public String getDataEvento() {
+	public Calendar getDataEvento() {
 		return dataEvento;
 	}
 
 
-	public void setDataEvento(String dataEvento) {
+	public void setDataEvento(Calendar dataEvento) {
 		this.dataEvento = dataEvento;
 	}
 
