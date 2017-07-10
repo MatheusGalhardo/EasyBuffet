@@ -56,19 +56,19 @@
                         <form name="newEvent" role="form">
                             <div class="form-group col-sm-12">
                                 <label>Nome do Evento</label>
-                                <input class="form-control" placeholder="Evento X" id="nome">
+                                <input class="form-control" placeholder="Evento X" name="nome">
                             </div>
                             <div class="form-group col-sm-6">
                                 <label>Data do Evento</label>
-                                <input class="form-control" placeholder="Enter text" type="date" id="data">
+                                <input class="form-control" placeholder="Enter text" type="date" name="data">
                             </div>
                             <div class="form-group col-sm-6">
                                 <label>N de Convidados</label>
-                                <input class="form-control" placeholder="5" type="number" id="convidados">
+                                <input class="form-control" placeholder="5" type="number" name="convidados">
                             </div>
                             <div class="form-group col-sm-6">
                                 <label>Tipo de Buffet</label>
-                                <select class="form-control" id="tipo">
+                                <select class="form-control" name="tipo">
                                     <option value="" selected disabled>Selecione um dos tipos</option>
                                     <option>Casamento</option>
                                     <option>Formatura</option>
@@ -80,16 +80,16 @@
                             </div>
                             <div class="form-group col-sm-6">
                                 <label>Website</label>
-                                <input class="form-control" placeholder="www.eventox.com" id="website">
+                                <input class="form-control" placeholder="www.eventox.com" name="website">
                             </div>
                             <div class="form-group col-sm-12">
                                 <label>Descrição do Evento</label>
-                                <textarea class="form-control" rows="3" id="descricao"></textarea>
+                                <textarea class="form-control" rows="3" name="descricao"></textarea>
                             </div>
                             <h3 class="col-sm-12">Local do Evento</h3>
                             <div class="form-group col-sm-6">
                                 <label>Local do Evento</label>
-                                <select class="form-control" id="local">
+                                <select class="form-control" name="local">
                                     <option value="" selected disabled>Selecione um dos locais</option>
                                     <option>Oliveiras Place</option>
                                     <option>Casa Lis</option>
@@ -98,11 +98,11 @@
                             </div>
                             <div class="form-group col-sm-6">
                                 <label>Endereço</label>
-                                <input class="form-control" placeholder="Enter text" id="endereco">
+                                <input class="form-control" placeholder="Enter text" name="endereco">
                             </div>
                             <div class="form-group col-sm-6">
                                 <label>Complemento</label>
-                                <input class="form-control" id="complemento">
+                                <input class="form-control" name="complemento">
                             </div>
                             <hr>
                             <button type="submit" class="btn btn-success col-sm-12" data-toggle="modal" data-target="#confirmModal" style="margin-bottom: 50px;">Salvar</button>
