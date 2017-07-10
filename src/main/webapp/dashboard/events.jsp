@@ -77,17 +77,18 @@
 									<tr>
 										<th>Nome</th>
 										<th>Data</th>
-										<th>Tipo</th>
-										<th>Numero de Convidados</th>
+										<th>Convidados</th>
+										<th>Ações</th>
 									</tr>
 								</thead>
 
 									<c:forEach items="${listaEventos}" var="events">
 										<tr>
 											<td><c:out value="${events.nomeEvento}" /></td>
-											<td><c:out value="${events.dataEvento}" /></td>
-											<%-- <td><c:out value="${events.type}" /></td>
-											<td><c:out value="${events.guests}" /></td> --%>
+											<td><c:out value="${events.dataString}" /></td>
+											<td><c:out value="${events.numeroConvidados}"></c:out></td>
+											<td><a href="events?.operacao=excluir&idEvento=${events.id}" class="btn btn-info btn-sm" role="button">
+<span class="fa fa-pencil" aria-hidden="true"></span> Editar</a></td>
 										</tr>
 									</c:forEach>
 	
