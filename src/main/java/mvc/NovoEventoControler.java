@@ -1,6 +1,8 @@
 package mvc;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -13,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(value = "/dashboard/new-event.html")
-public class EventoControler extends HttpServlet {
+public class NovoEventoControler extends HttpServlet {
 	
 	@Override
 	protected void doGet(
@@ -21,10 +23,12 @@ public class EventoControler extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		
 		boolean persistido = false;
-		Evento evento = new Evento();		
+		Evento evento = new Evento();
 		
+		if(request.getParameter("nome") != null){
 		evento.setNomeEvento(request.getParameter("nome"));
-		evento.setDataEvento(Utilitarios.stringToCalendar(request.getParameter("data"), "dd/mm/yyyy"));
+		evento.setDataEvento(Utilitarios.stringToCalendar(request.getParameter("data"), "dd/MM/yyyy"));
+		String dataConvertida  = Utilitarios.converteDataCalendar(evento.getDataEvento(), true);
 		evento.setNumeroConvidados(request.getParameter("convidados"));
 		evento.setWebsiteEvento(request.getParameter("website"));
 		evento.setDescricaoEvento(request.getParameter("descricao"));
@@ -35,11 +39,16 @@ public class EventoControler extends HttpServlet {
 		boolean estaPreenchido = Utilitarios.verificaCampos(evento);
 		
 		if(estaPreenchido){
+			
+			//MATHEUS E RENAN, CHAMAR O DAO DE VOCES PRA SALVAR AQUI, DA SEGUINTE FORMA:
+			// persistido = EventoDao.salvar....;
+			
 			if(persistido){
 				request.setAttribute("msgGeral", "Salvo com sucesso!");
 				}else{
 					request.setAttribute("msgGeral", "Falha ao salvar!");
 				}
+			}
 		}
                
 		request.getRequestDispatcher("new-event.jsp").
