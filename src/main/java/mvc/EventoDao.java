@@ -12,7 +12,7 @@ import javax.persistence.TypedQuery;
  */
 public class EventoDao {
 
-	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("professores");
+	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("eventos");
 
 	public static void inclui(Evento e) {
 		// Obter "conexão".
