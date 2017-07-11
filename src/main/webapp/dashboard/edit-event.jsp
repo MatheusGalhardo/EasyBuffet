@@ -66,7 +66,7 @@
 						<form name="newEvent" role="form" action="edit-event.html?operacao=confirmaralteracao">
 							<div class="form-group col-sm-12">
 								<label>Nome do Evento</label> <input class="form-control"
-									value="${nomeEvento}" name="nome" disabled>
+									value="${nomeEvento}" name="nome" readonly="readonly">
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Data do Evento</label> <input class="form-control"

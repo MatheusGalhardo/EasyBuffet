@@ -51,7 +51,7 @@ public class EditarEventoControler extends HttpServlet {
             }	
 		}
 		
-		if(request.getParameter("nomeEvento") != null){
+		if(request.getParameter("nome") != null){
 			evento.setNomeEvento(request.getParameter("nome"));
 			evento.setDataEvento(Utilitarios.stringToCalendar(request.getParameter("data"), "dd/MM/yyyy"));
 			String dataConvertida  = Utilitarios.converteDataCalendar(evento.getDataEvento(), true);
