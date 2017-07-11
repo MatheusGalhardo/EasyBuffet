@@ -88,7 +88,7 @@
 										<td>${events.dataString}</td>
 										<td>${events.numeroConvidados}</td>
 										<td><a
-											href="events.html?operacao=editar&nomeEvento=${events.nomeEvento}"
+											href="edit-event.html?operacao=editar&nomeEvento=${events.nomeEvento}"
 											class="btn btn-warning btn-sm" role="button"> <span
 												class="fa fa-pencil" aria-hidden="true"></span> Editar
 										</a><a

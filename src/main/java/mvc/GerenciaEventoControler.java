@@ -29,10 +29,6 @@ public class GerenciaEventoControler extends HttpServlet {
     		EventoDao.excluir(nomeEvento);
     	}
     	
-    	if(operacao != null && operacao.equals("editar")){
-    		
-    	}
-
         ArrayList<Evento> eventos = new ArrayList();
         
         eventos = (ArrayList<Evento>) EventoDao.listar();
