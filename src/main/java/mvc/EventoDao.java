@@ -28,7 +28,14 @@ public class EventoDao {
 	public static void alterar(String matricula, String nome) {
 	}
 
-	public static void excluir(String matricula) {
+	public static void excluir(String nomeEvento) {
+		
+	        EntityManager em  = emf.createEntityManager();
+	        em.getTransaction().begin(); 
+	        em.remove(em.getReference(Evento.class,nomeEvento));
+	        em.getTransaction().commit();
+	        em.close();
+
 	}
 
 	public static List<Evento> listar() {

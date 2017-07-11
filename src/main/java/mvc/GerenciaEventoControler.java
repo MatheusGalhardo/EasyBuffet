@@ -21,6 +21,17 @@ public class GerenciaEventoControler extends HttpServlet {
     protected void doGet(
             HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
+    	
+    	String operacao = request.getParameter("operacao");
+    	
+    	if(operacao != null && operacao.equals("excluir")){
+    		String nomeEvento = request.getParameter("nomeEvento");
+    		EventoDao.excluir(nomeEvento);
+    	}
+    	
+    	if(operacao != null && operacao.equals("editar")){
+    		
+    	}
 
         ArrayList<Evento> eventos = new ArrayList();
         

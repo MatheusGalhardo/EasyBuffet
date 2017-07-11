@@ -12,8 +12,6 @@ public class Evento {
 
    
 	@Id
-	private float id;
-	
     private String nomeEvento;
     private Calendar dataEvento;
     private String dataString;
@@ -58,16 +56,6 @@ public class Evento {
 
 	public void setDescricaoEvento(String descricaoEvento) {
 		this.descricaoEvento = descricaoEvento;
-	}
-
-
-	public float getId() {
-		return id;
-	}
-
-
-	public void setId(float id) {
-		this.id = id;
 	}
 
 

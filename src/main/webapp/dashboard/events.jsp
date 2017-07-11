@@ -88,11 +88,11 @@
 										<td>${events.dataString}</td>
 										<td>${events.numeroConvidados}</td>
 										<td><a
-											href="events?.operacao=editar&nomeEvento=${events.nomeEvento}"
+											href="events.html?operacao=editar&nomeEvento=${events.nomeEvento}"
 											class="btn btn-warning btn-sm" role="button"> <span
 												class="fa fa-pencil" aria-hidden="true"></span> Editar
 										</a><a
-											href="events?.operacao=excluir&nomeEvento=${events.nomeEvento}"
+											href="events.html?operacao=excluir&nomeEvento=${events.nomeEvento}"
 											class="btn btn-danger btn-sm" role="button"> <span
 												class="fa fa-trash" aria-hidden="true"></span> Excluir
 										</a></td>
