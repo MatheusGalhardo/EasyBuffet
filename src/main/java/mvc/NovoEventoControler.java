@@ -26,25 +26,29 @@ public class NovoEventoControler extends HttpServlet {
 		Evento evento = new Evento();
 		
 		if(request.getParameter("nome") != null){
-		evento.setNomeEvento(request.getParameter("nome"));
-		evento.setDataEvento(Utilitarios.stringToCalendar(request.getParameter("data"), "dd/MM/yyyy"));
-		String dataConvertida  = Utilitarios.converteDataCalendar(evento.getDataEvento(), true);
-		evento.setNumeroConvidados(request.getParameter("convidados"));
-		evento.setWebsiteEvento(request.getParameter("website"));
-		evento.setDescricaoEvento(request.getParameter("descricao"));
-		evento.setLocalEvento(request.getParameter("local"));
-		evento.setEnderecoEvento(request.getParameter("endereco"));
-		evento.setComplementoEndereco(request.getParameter("complemento"));
+			evento.setNomeEvento(request.getParameter("nome"));
+			evento.setDataEvento(Utilitarios.stringToCalendar(request.getParameter("data"), "dd/MM/yyyy"));
+			String dataConvertida  = Utilitarios.converteDataCalendar(evento.getDataEvento(), true);
+			evento.setNumeroConvidados(request.getParameter("convidados"));
+			evento.setWebsiteEvento(request.getParameter("website"));
+			evento.setDescricaoEvento(request.getParameter("descricao"));
+			evento.setLocalEvento(request.getParameter("local"));
+			evento.setEnderecoEvento(request.getParameter("endereco"));
+			evento.setComplementoEndereco(request.getParameter("complemento"));
 		
-		boolean estaPreenchido = Utilitarios.verificaCampos(evento);
+			boolean estaPreenchido = Utilitarios.verificaCampos(evento);
 		
-		if(estaPreenchido){
+			if(estaPreenchido){
+				try{
+					EventoDao.inclui(evento);
+					request.setAttribute("msgGeral", "Salvo com sucesso!");	
 			
-			EventoDao.inclui(evento);
-			request.setAttribute("msgGeral", "Salvo com sucesso!");	
+				}catch(Exception e){
+					request.setAttribute("msgGeral", "Falha ao gravar evento.");
+				}
 			}
-		
 		}      
+		
 		request.getRequestDispatcher("new-event.jsp").
 			forward(request, response);
                 
