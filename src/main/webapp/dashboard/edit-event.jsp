@@ -65,8 +65,12 @@
 						<h3 class="col-sm-12">Informações Gerais</h3>
 						<form name="newEvent" role="form" action="edit-event.html?operacao=confirmaralteracao">
 							<div class="form-group col-sm-12">
+								<label>Id</label> <input class="form-control"
+									value="${id}" name="id" readonly="readonly">
+							</div>
+							<div class="form-group col-sm-12">
 								<label>Nome do Evento</label> <input class="form-control"
-									value="${nomeEvento}" name="nome" readonly="readonly">
+									value="${nomeEvento}" name="nome">
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Data do Evento</label> <input class="form-control"

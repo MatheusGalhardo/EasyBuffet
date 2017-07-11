@@ -24,17 +24,19 @@ public class EditarEventoControler extends HttpServlet {
 		
 		Evento evento = new Evento();
 		
-		String nomeEvento = request.getParameter("nomeEvento");
+		Long idEvento = Long.parseLong(request.getParameter("id"));
+		
 		String operacao = request.getParameter("operacao");
 		
-		if(nomeEvento != null && operacao != null && operacao.equals("editar")){
+		if(idEvento != null && operacao != null && operacao.equals("editar")){
     		ArrayList<Evento> eventosE = new ArrayList();
             
             eventosE = (ArrayList<Evento>) EventoDao.listar();
             
             for(Evento p : eventosE){
-            	if(p.getNomeEvento().equals(nomeEvento)){
+            	if(p.getId().equals(idEvento)){
             		p.setDataString(Utilitarios.converteDataCalendar(p.getDataEvento(), true));
+            		request.setAttribute("id", idEvento);
             		request.setAttribute("nomeEvento", p.getNomeEvento());
             		request.setAttribute("dataString", p.getDataString());
             		request.setAttribute("numeroConvidados", p.getNumeroConvidados());
@@ -52,6 +54,7 @@ public class EditarEventoControler extends HttpServlet {
 		}
 		
 		if(request.getParameter("nome") != null){
+			evento.setId(Long.parseLong(request.getParameter("id")));
 			evento.setNomeEvento(request.getParameter("nome"));
 			evento.setDataEvento(Utilitarios.stringToCalendar(request.getParameter("data"), "dd/MM/yyyy"));
 			String dataConvertida  = Utilitarios.converteDataCalendar(evento.getDataEvento(), true);
@@ -66,7 +69,7 @@ public class EditarEventoControler extends HttpServlet {
 		
 			if(estaPreenchido){
 				try{
-					
+					EventoDao.alterar(evento);
 					request.setAttribute("msgGeral", "Salvo com sucesso!");	
 			
 				}catch(Exception e){

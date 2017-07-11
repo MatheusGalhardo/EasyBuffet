@@ -25,14 +25,24 @@ public class EventoDao {
 		em.close();
 	}
 
-	public static void alterar(String matricula, String nome) {
+	public static void alterar(Evento e) {
+		
+            EntityManager em = emf.createEntityManager();
+            em.getTransaction().begin();
+
+            Evento event = em.find(Evento.class, e.getId());
+            if(event.getId() != null && event.getId().equals(e.getId())){
+            event=e;
+           }
+            em.merge(event);
+            em.getTransaction().commit();  
 	}
 
-	public static void excluir(String nomeEvento) {
+	public static void excluir(Long idEvento) {
 		
 	        EntityManager em  = emf.createEntityManager();
 	        em.getTransaction().begin(); 
-	        em.remove(em.getReference(Evento.class,nomeEvento));
+	        em.remove(em.getReference(Evento.class,idEvento));
 	        em.getTransaction().commit();
 	        em.close();
 

@@ -76,6 +76,7 @@
 								<thead>
 									<tr>
 										<th>ID</th>
+										<th>Nome</th>
 										<th>Data</th>
 										<th>Convidados</th>
 										<th>Ações</th>
@@ -85,14 +86,15 @@
 								<c:forEach items="${listaEventos}" var="events">
 									<tr>
 										<td>${events.id}</td>
+										<td>${events.nomeEvento}</td>
 										<td>${events.dataString}</td>
 										<td>${events.numeroConvidados}</td>
 										<td><a
-											href="edit-event.html?operacao=editar&nomeEvento=${events.nomeEvento}"
+											href="edit-event.html?operacao=editar&id=${events.id}"
 											class="btn btn-warning btn-sm" role="button"> <span
 												class="fa fa-pencil" aria-hidden="true"></span> Editar
 										</a><a
-											href="events.html?operacao=excluir&nomeEvento=${events.nomeEvento}"
+											href="events.html?operacao=excluir&id=${events.id}"
 											class="btn btn-danger btn-sm" role="button"> <span
 												class="fa fa-trash" aria-hidden="true"></span> Excluir
 										</a></td>

@@ -25,8 +25,8 @@ public class GerenciaEventoControler extends HttpServlet {
     	String operacao = request.getParameter("operacao");
     	
     	if(operacao != null && operacao.equals("excluir")){
-    		String nomeEvento = request.getParameter("nomeEvento");
-    		EventoDao.excluir(nomeEvento);
+    		Long idEvento = Long.parseLong(request.getParameter("id"));
+    		EventoDao.excluir(idEvento);
     	}
     	
         ArrayList<Evento> eventos = new ArrayList();
