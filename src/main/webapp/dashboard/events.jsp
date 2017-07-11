@@ -93,7 +93,8 @@
 											href="edit-event.html?operacao=editar&id=${events.id}"
 											class="btn btn-warning btn-sm" role="button"> <span
 												class="fa fa-pencil" aria-hidden="true"></span> Editar
-										</a><a
+										</a>
+										<a
 											href="events.html?operacao=excluir&id=${events.id}"
 											class="btn btn-danger btn-sm" role="button"> <span
 												class="fa fa-trash" aria-hidden="true"></span> Excluir
