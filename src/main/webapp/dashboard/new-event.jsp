@@ -30,7 +30,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="index.html"><img
+				<a class="navbar-brand" href="../index.html"><img
 					src="..\img\logo.png" alt="EasyBuffet"></a>
 			</div>
 			<!-- Top Menu Items -->
@@ -40,9 +40,10 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="dashboard.html"><i
 							class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
-					<li><a href="#"><i class="fa fa-fw fa-table"></i> Meus
-							Eventos</a></li>
-					<li><a href="#"><i class="fa fa-fw fa-power-off"></i> Sair</a></li>
+					<li><a href="events.html"><i class="fa fa-fw fa-table"></i>
+							Meus Eventos</a></li>
+					<li><a href="..\index.html"><i
+							class="fa fa-fw fa-power-off"></i> Sair</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -60,7 +61,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-6 offset-md-4">
 						<h3 class="col-sm-12">Informações Gerais</h3>
 						<form name="newEvent" role="form">
 							<div class="form-group col-sm-12">
@@ -68,10 +69,14 @@
 									placeholder="Evento X" name="nome" required>
 							</div>
 							<div class="form-group col-sm-6">
-								<label>Data do Evento</label> <input class="form-control" type="text" name="data" id="campoData" placeholder="dd/mm/yyyy" required>
+								<label>Data do Evento</label> <input class="form-control"
+									type="text" name="data" id="campoData" placeholder="dd/mm/yyyy"
+									required>
 								<script>
-								jQuery(function($){
-									   $("#campoData").mask("99/99/9999",{placeholder:"dd/mm/yyyy"});
+									jQuery(function($) {
+										$("#campoData").mask("99/99/9999", {
+											placeholder : "dd/mm/yyyy"
+										});
 									});
 								</script>
 							</div>
@@ -97,7 +102,8 @@
 							</div>
 							<div class="form-group col-sm-12">
 								<label>Descrição do Evento</label>
-								<textarea class="form-control" rows="3" name="descricao" placeholder="Alguns detalhes a serem ressaltados são: ..."></textarea>
+								<textarea class="form-control" rows="3" name="descricao"
+									placeholder="Alguns detalhes a serem ressaltados são: ..."></textarea>
 							</div>
 							<h3 class="col-sm-12">Local do Evento</h3>
 							<div class="form-group col-sm-6">
@@ -112,7 +118,8 @@
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Endereço</label> <input class="form-control"
-									placeholder="R do Espaco 1208, Jd Goias" name="endereco" required>
+									placeholder="R do Espaco 1208, Jd Goias" name="endereco"
+									required>
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Complemento</label> <input class="form-control"
@@ -122,6 +129,7 @@
 							<button type="submit" class="btn btn-success col-sm-12"
 								data-toggle="modal" data-target="#confirmModal"
 								style="margin-bottom: 50px;">Salvar</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -131,7 +139,10 @@
 	<script src="js/jquery.js"></script>
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
-	<div class="alert alert-success" role="alert">${msgGeral}</div>
+	<div class="alert alert-success alert-dismissable fade in" role="alert">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		${msgGeral}
+	</div>
 </body>
 
 </html>

@@ -21,7 +21,7 @@
 	href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"
 	rel="stylesheet">
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!-- Custom CSS -->
 <link href="css/sb-admin.css" rel="stylesheet">
 
@@ -38,7 +38,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="index.html"><img
+				<a class="navbar-brand" href="..\index.html"><img
 					src="..\img\logo.png" alt="EasyBuffet"></a>
 			</div>
 			<!-- Top Menu Items -->
@@ -50,7 +50,7 @@
 							class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
 					<li class="active"><a href="#"><i
 							class="fa fa-fw fa-table"></i> Meus Eventos</a></li>
-					<li><a href="#"><i class="fa fa-fw fa-power-off"></i> Sair</a></li>
+					<li><a href="..\index.html"><i class="fa fa-fw fa-power-off"></i> Sair</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -82,16 +82,23 @@
 									</tr>
 								</thead>
 
-									<c:forEach items="${listaEventos}" var="events">
-										<tr>
-											<td><c:out value="${events.nomeEvento}" /></td>
-											<td><c:out value="${events.dataString}" /></td>
-											<td><c:out value="${events.numeroConvidados}"></c:out></td>
-											<td><a href="events?.operacao=excluir&idEvento=${events.id}" class="btn btn-info btn-sm" role="button">
-<span class="fa fa-pencil" aria-hidden="true"></span> Editar</a></td>
-										</tr>
-									</c:forEach>
-	
+								<c:forEach items="${listaEventos}" var="events">
+									<tr>
+										<td>${events.nomeEvento}</td>
+										<td>${events.dataString}</td>
+										<td>${events.numeroConvidados}</td>
+										<td><a
+											href="events?.operacao=editar&nomeEvento=${events.nomeEvento}"
+											class="btn btn-warning btn-sm" role="button"> <span
+												class="fa fa-pencil" aria-hidden="true"></span> Editar
+										</a><a
+											href="events?.operacao=excluir&nomeEvento=${events.nomeEvento}"
+											class="btn btn-danger btn-sm" role="button"> <span
+												class="fa fa-trash" aria-hidden="true"></span> Excluir
+										</a></td>
+									</tr>
+								</c:forEach>
+
 							</table>
 						</div>
 					</div>
