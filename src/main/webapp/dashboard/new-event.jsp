@@ -86,7 +86,7 @@
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Tipo de Buffet</label> <select class="form-control"
-									name="tipo">
+									name="tipo" required>
 									<option value="" selected disabled>Selecione um dos tipos</option>
 									<option>Casamento</option>
 									<option>Formatura</option>
@@ -127,7 +127,7 @@
 							</div>
 							<hr>
 							<button type="submit" class="btn btn-success col-sm-12"
-								data-toggle="modal" data-target="#confirmModal"
+								data-toggle="modal" data-target="#confirmmodal"
 								style="margin-bottom: 50px;">Salvar</button>
 						</form>
 					</div>
