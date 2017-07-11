@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(value = "/dashboard/edit-event.html")
-public class EditarEventoControler extends HttpServlet {
+public class EditarEventoControler extends HttpServlet { // Mapeamento do Servelet, gerador de dados.
 	
 	@Override
 	protected void doGet(
