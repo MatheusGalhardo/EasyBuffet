@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="../css\estilo.css">
 <link href="..\vendor\bootstrap\css\bootstrap.min.css" rel="stylesheet">
 
-<title>EasyBuffet - Novo Evento</title>
+<title>EasyBuffet - Editar Evento</title>
 <link href="..\vendor\font-awesome\css\font-awesome.min.css"
 	rel="stylesheet" type="text/css">
 <link
@@ -42,7 +42,7 @@
 							class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
 					<li><a href="events.html"><i class="fa fa-fw fa-table"></i>
 							Meus Eventos</a></li>
-					<li><a href="..\index.html"><i
+					<li><a href="../index.html"><i
 							class="fa fa-fw fa-power-off"></i> Sair</a></li>
 				</ul>
 			</div>
@@ -53,10 +53,10 @@
 				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-12">
-						<h1 class="page-header">Novo Evento</h1>
+						<h1 class="page-header">Editar Evento</h1>
 						<ol class="breadcrumb">
 							<li class="active"><i class="fa fa-cutlery"></i> Aqui você
-								poderá criar um novo evento.</li>
+								poderá editar um evento criado.</li>
 						</ol>
 					</div>
 				</div>
@@ -64,13 +64,9 @@
 					<div class="col-lg-6 offset-md-4">
 						<h3 class="col-sm-12">Informações Gerais</h3>
 						<form name="newEvent" role="form">
-							<div class="form-group col-sm-12">
-								<label>Nome do Evento</label> <input class="form-control"
-									placeholder="Evento X" name="nome" required>
-							</div>
 							<div class="form-group col-sm-6">
 								<label>Data do Evento</label> <input class="form-control"
-									type="text" name="data" id="campoData" placeholder="dd/mm/yyyy"
+									type="text" name="data" id="campoData" placeholder="dd/mm/yyyy" value="#{dataString}"
 									required>
 								<script>
 									jQuery(function($) {
@@ -82,21 +78,21 @@
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Numero de Convidados</label> <input class="form-control"
-									placeholder="X" type="number" name="convidados" required>
+									placeholder="X" type="number" name="convidados" value="#{numeroConvidados}" required>
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Website</label> <input class="form-control"
-									placeholder="www.eventox.com" name="website">
+									placeholder="www.eventox.com" name="website" value="#{websiteEvento}">
 							</div>
 							<div class="form-group col-sm-12">
 								<label>Descrição do Evento</label>
 								<textarea class="form-control" rows="3" name="descricao"
-									placeholder="Alguns detalhes a serem ressaltados são: ..."></textarea>
+									placeholder="Alguns detalhes a serem ressaltados são: ..." value="#{descricaoEvento}"></textarea>
 							</div>
 							<h3 class="col-sm-12">Local do Evento</h3>
 							<div class="form-group col-sm-6">
 								<label>Local do Evento</label> <select class="form-control"
-									name="local" required>
+									name="local" value="#{localEvento}" required>
 									<option value="" selected disabled>Selecione um dos locais</option>
 									<option>Oliveiras Place</option>
 									<option>Casa Lis</option>
@@ -106,17 +102,16 @@
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Endereço</label> <input class="form-control"
-									placeholder="R do Espaco 1208, Jd Goias" name="endereco"
-									required>
+									placeholder="R do Espaco 1208, Jd Goias" name="endereco" value="#{enderecoEvento}" required>
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Complemento</label> <input class="form-control"
-									name="complemento">
+									name="complemento" value="#{complementoEndereco}">
 							</div>
 							<hr>
-							<button type="submit" class="btn btn-success col-sm-12"
-								data-toggle="modal" data-target="#confirmmodal"
-								style="margin-bottom: 50px;">Salvar</button>
+							<a class="btn btn-success col-sm-12"
+								href="edit-event.html?operacao=confirmaralteracao&nomeEvento=#{nomeEvento}" role="button"
+								style="margin-bottom: 50px;">Salvar</a>
 						</form>
 					</div>
 				</div>
