@@ -8,6 +8,7 @@ import java.util.Calendar;
 public class Utilitarios {
 
 	
+  //A funcao verifica campos realiza o trabalho de verificar se os campos minimos aceitaveis estao preenchidos para persistirem.
   public static boolean verificaCampos(Evento evento){
 	  
 	  if(evento.getNomeEvento() != null && evento.getNumeroConvidados() != null && 
@@ -18,6 +19,7 @@ public class Utilitarios {
 		  }
 	  }
   
+  //Esta funcao e responsavel por receber um dado do tipo Calendar e retornar um string
   public static String converteDataCalendar(Calendar data, boolean formatar) {
       String saida = "";
       if (data != null) {
@@ -30,6 +32,7 @@ public class Utilitarios {
       return saida;
   }
   
+  //Funcao responsavel por receber um string e retornar um calendar ja com a formatacao escolhida pelo metodo que realizou a chamada
   public static Calendar stringToCalendar(String data, String formato) {
       try {
           SimpleDateFormat formatoDate = new SimpleDateFormat(formato);

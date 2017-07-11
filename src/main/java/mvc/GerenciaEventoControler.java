@@ -24,11 +24,13 @@ public class GerenciaEventoControler extends HttpServlet {
     	
     	String operacao = request.getParameter("operacao");
     	
+    	//Caso o conteudo da variavel operacao seja excluir e usado o id do evento para exclui-lo no banco.
     	if(operacao != null && operacao.equals("excluir")){
     		Long idEvento = Long.parseLong(request.getParameter("id"));
     		EventoDao.excluir(idEvento);
     	}
     	
+    	//Neste ponto recebemos a lista de eventos para que a data seja convertida de date para string para que a tela receba.
         ArrayList<Evento> eventos = new ArrayList();
         
         eventos = (ArrayList<Evento>) EventoDao.listar();
@@ -37,6 +39,7 @@ public class GerenciaEventoControler extends HttpServlet {
         	p.setDataString(Utilitarios.converteDataCalendar(p.getDataEvento(), true));
         }
 
+        //Passando a lista para a tela e disparando a mesma.
         request.setAttribute("listaEventos", eventos);
 
         request.getRequestDispatcher("events.jsp").

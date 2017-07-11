@@ -28,6 +28,7 @@ public class EditarEventoControler extends HttpServlet {
 		
 		String operacao = request.getParameter("operacao");
 		
+		//Caso a operacao seja editar pegamos o evento selecionado e inserimos seus dados na tela.
 		if(idEvento != null && operacao != null && operacao.equals("editar")){
     		ArrayList<Evento> eventosE = new ArrayList();
             
@@ -53,6 +54,7 @@ public class EditarEventoControler extends HttpServlet {
             }	
 		}
 		
+		//Neste ponto as edicoes ja foram efetuadas na tela, nos capturamos as mesmas e fazemos o merge no banco.
 		if(request.getParameter("nome") != null){
 			evento.setId(Long.parseLong(request.getParameter("id")));
 			evento.setNomeEvento(request.getParameter("nome"));
