@@ -5,14 +5,25 @@ import static java.lang.System.out;
 import java.util.Calendar;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Evento {
 
    
-	@Id
-    private String nomeEvento;
+	@Id @GeneratedValue
+	private Long id;
+	
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	private String nomeEvento;
     private Calendar dataEvento;
     private String dataString;
     private String numeroConvidados;

@@ -75,7 +75,7 @@
 							<table class="table table-hover table-striped" id="eventsResult">
 								<thead>
 									<tr>
-										<th>Nome</th>
+										<th>ID</th>
 										<th>Data</th>
 										<th>Convidados</th>
 										<th>Ações</th>
@@ -84,7 +84,7 @@
 
 								<c:forEach items="${listaEventos}" var="events">
 									<tr>
-										<td>${events.nomeEvento}</td>
+										<td>${events.id}</td>
 										<td>${events.dataString}</td>
 										<td>${events.numeroConvidados}</td>
 										<td><a
