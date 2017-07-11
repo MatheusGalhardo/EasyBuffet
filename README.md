@@ -29,4 +29,4 @@ No Linux, use ./mvnw ao invés de apenas mvnw, como no Windows. Além disso, pel
 
 ## Para acessar a aplicação
 
-http://localhost:8080/EasyBuffet no navegador.
+http://localhost:9090/EasyBuffet no navegador.
