@@ -40,7 +40,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="dashboard.html"><i
 							class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
-					<li><a href="edit-event.html"><i class="fa fa-fw fa-table"></i>
+					<li><a href="events.html"><i class="fa fa-fw fa-table"></i>
 							Meus Eventos</a></li>
 					<li><a href="../index.html"><i
 							class="fa fa-fw fa-power-off"></i> Sair</a></li>
@@ -65,10 +65,8 @@
 						<h3 class="col-sm-12">Informações Gerais</h3>
 						<form name="newEvent" role="form" action="edit-event.html?operacao=confirmaralteracao">
 							<div class="form-group col-sm-12">
-								 <label class="control-label col-sm-2" for="email">Nome do Evento:</label>
-								<div class="col-sm-10">
-									<p class="form-control-static">${nomeEvento}</p>
-								</div>
+								<label>Nome do Evento</label> <input class="form-control"
+									value="${nomeEvento}" name="nome" disabled>
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Data do Evento</label> <input class="form-control"
@@ -120,7 +118,6 @@
 							</div>
 							<hr>
 							<button type="submit" class="btn btn-success col-sm-12"
-                                data-toggle="modal" data-target="#confirmmodal"
                                 style="margin-bottom: 50px;">Salvar</button>
 						</form>
 					</div>
