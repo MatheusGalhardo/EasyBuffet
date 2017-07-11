@@ -56,7 +56,7 @@
 						<h1 class="page-header">Editar Evento</h1>
 						<ol class="breadcrumb">
 							<li class="active"><i class="fa fa-cutlery"></i> Aqui você
-								poderá editar um evento criado.</li>
+								poderá editar um evento.</li>
 						</ol>
 					</div>
 				</div>
@@ -64,10 +64,16 @@
 					<div class="col-lg-6 offset-md-4">
 						<h3 class="col-sm-12">Informações Gerais</h3>
 						<form name="newEvent" role="form">
+							<div class="form-group col-sm-12">
+								 <label class="control-label col-sm-2" for="email">Nome do Evento:</label>
+								<div class="col-sm-10">
+									<p class="form-control-static">#{nomeEvento}</p>
+								</div>
+							</div>
 							<div class="form-group col-sm-6">
 								<label>Data do Evento</label> <input class="form-control"
-									type="text" name="data" id="campoData" placeholder="dd/mm/yyyy" value="#{dataString}"
-									required>
+									type="text" name="data" id="campoData" placeholder="dd/mm/yyyy"
+									value="#{dataString}" required>
 								<script>
 									jQuery(function($) {
 										$("#campoData").mask("99/99/9999", {
@@ -78,16 +84,19 @@
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Numero de Convidados</label> <input class="form-control"
-									placeholder="X" type="number" name="convidados" value="#{numeroConvidados}" required>
+									placeholder="X" type="number" name="convidados"
+									value="#{numeroConvidados}" required>
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Website</label> <input class="form-control"
-									placeholder="www.eventox.com" name="website" value="#{websiteEvento}">
+									placeholder="www.eventox.com" name="website"
+									value="#{websiteEvento}">
 							</div>
 							<div class="form-group col-sm-12">
 								<label>Descrição do Evento</label>
 								<textarea class="form-control" rows="3" name="descricao"
-									placeholder="Alguns detalhes a serem ressaltados são: ..." value="#{descricaoEvento}"></textarea>
+									placeholder="Alguns detalhes a serem ressaltados são: ..."
+									value="#{descricaoEvento}"></textarea>
 							</div>
 							<h3 class="col-sm-12">Local do Evento</h3>
 							<div class="form-group col-sm-6">
@@ -102,7 +111,8 @@
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Endereço</label> <input class="form-control"
-									placeholder="R do Espaco 1208, Jd Goias" name="endereco" value="#{enderecoEvento}" required>
+									placeholder="R do Espaco 1208, Jd Goias" name="endereco"
+									value="#{enderecoEvento}" required>
 							</div>
 							<div class="form-group col-sm-6">
 								<label>Complemento</label> <input class="form-control"
@@ -110,8 +120,8 @@
 							</div>
 							<hr>
 							<a class="btn btn-success col-sm-12"
-								href="edit-event.html?operacao=confirmaralteracao&nomeEvento=#{nomeEvento}" role="button"
-								style="margin-bottom: 50px;">Salvar</a>
+								href="edit-event.html?operacao=confirmaralteracao&nomeEvento=#{nomeEvento}"
+								role="button" style="margin-bottom: 50px;">Salvar</a>
 						</form>
 					</div>
 				</div>
